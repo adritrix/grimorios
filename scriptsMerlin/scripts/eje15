@@ -1,0 +1,52 @@
+#!/bin/bash 
+s=0
+while  [ $s = 0 ]
+do
+	read -p "Pulsa '1' para salir o pulsa '0' para continuar" s
+	if [ $s -eq 0  ]
+	then
+		read -p "Dame el primer numero " n1
+
+		read -p "Dame el segundo numero " n2
+
+#		read -p "Dame el tercer numero " n3
+
+		echo "Numeros introducidos"
+
+		echo "----------------------------------------------"
+
+		echo "Pulsa 's' para sumarlos "
+
+		echo "Pulsa 'r' para restarlos "
+
+		echo "Pulsa 'm' para multiplicarlos"
+
+		echo "Pulsa 'd' para dividirlos"
+
+		read op
+
+		if [ $op = "s"  ]
+		then
+			echo $n1 + $n2 | bc
+		fi
+
+
+		if [ $op = "r"  ]
+		then
+			echo $n1 - $n2 | bc
+		fi
+
+		if [ $op = "m"  ]
+		then
+			echo $n1 * $n2 | bc
+		fi
+
+		if [ $op = "d"  ]
+		then
+			echo  "scale=2; $n1 / $n2" | bc
+		fi
+		
+	else
+		exit 0;
+	fi
+done

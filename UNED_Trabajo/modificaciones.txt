@@ -1,0 +1,9 @@
+modificar el tamaño de los split a 5 gigas 
+
+comentar con aclaraciones 
+
+asegurarse de que los permisios se queden igual 
+
+en la part5e del date de la hora poner dos puntos en vez de barra baja
+
+hace un cd antes de la desempaquetacio  

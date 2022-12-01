@@ -1,0 +1,32 @@
+Dudas usando el tar para las copias incrementales --> mo pasa nada tu tira del tar
+
+Cuantos scripts he de hacer-----> haz un solo sc ript (añadir que van a tener que ser 2 como minimo ya que uno son las copias diarias y otro las copias semanales)
+
+contraseña del correo del server ---> aun no estatodavia
+
+pregunta sobre la implementacion del proyecto ----> la idea es q lo configures tu pero dejalo bien para que los profes puedan reproducirlo 
+	lo voy a configurar yo en los servidores y luego dejo un manual para que lo repliquen 
+	creo un script que lo confugure todo.....
+	dejo un script para que los usuarios decidan que copias quieren hacer 
+	
+que servicios requieren copia 
+
+	ngnix ------> webmin
+	apache ----->
+	mysql ------>
+	poshri sql -- pgs1l -----> postgre
+ 
+como configuro los comandos para que cada x tiempo me borre las copias de seguridad antiguas -----> lo va a mirar
+
+
+
+
+app phpmyadmi 
+
+-xcvf
+
+webmin 
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+borro el archivo temporal ? 

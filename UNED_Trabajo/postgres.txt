@@ -1,0 +1,21 @@
+sudo pg_dump -U postgres -h localhost -d shakespeare > bk.sql -------------------> me hace la copia 
+
+sudo psql -U postgres -h localhost -d shakespeare -f bk.sql -------------------------------------------> me loa crea a partir de la copia 
+
+
+
+
+Desde el propio usuario de postgres con este comando se me monta la base de datos ------------ psql  -d shakespeare -f shakespeare.sql
+
+
+psql [baseDatos] < bk.sql --------> me construye la base de datos 
+
+pg_dump [baseDatos] > me vuelca la base de datos
+
+
+pg_dump [baseDatos] -t [tabla] > bk_tabla.sql
+
+sudo -u [user][comando] ------------------------> me ejecuta comandos como user
+
+
+/var/lib/pgsql

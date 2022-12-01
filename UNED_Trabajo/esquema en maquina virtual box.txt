@@ -1,0 +1,65 @@
+##############   ESQUEMA DE SCRIPT DE COPIAS DE SEGURIDAD EN MI EQUIPO VIRTUAL BOX #########################
+
+Se necestita empaquetar los datos del home, mysql y apache. Subir los archivos al onedrive con el rclone 
+
+
+Estructura de carpetas tree
+----------------
+
+/backups/
+├── diarias
+│   ├── apache
+│   │   ├── conf
+│   │   └── data
+│   ├── home
+│   │   └── data
+│   └── mysql
+│       ├── conf
+│       └── data
+└── semanales
+    ├── apache
+    │   ├── conf
+    │   └── data
+    ├── home
+    │   └── data
+    └── mysql
+        ├── conf
+        └── data
+
+
+
+Crear un perfil de rclone sido root
+------------------------------------
+
+sudo rclone config 
+
+Name                 Type
+====                 ====
+cloud                onedrive
+
+
+
+Copia diaria de apache/conf`
+
+	direccion donde se va a dejar el paquete ----> dirPaquete="/backups/diarias/apache/conf/"
+
+	crear directorio local ----> mkdir -p ${dirPaquete}
+
+	nombre del almacenamiento remoto----> remoto="cloud:"
+
+	formatear fecha----> fecha=`date +%Y_%m_%d_%H_%M`
+	
+	nombre del paquete ----> nombrePaquete="apacheConf_"
+
+	extension del paquete ----> extension=".tar.gz"
+
+	nombre completo del paquete (con extension fecha y ruta )----> nombrePaqueteCompleto=${dirPaquete}${nombrePaquete}${fecha}${extension}
+
+	direccion de los datos a empaquetar ----> dirDatos="/etc/apache2/"
+
+	ampaquetado con nombre completo del paqute del directprio de datos ----> tar -vcz -f ${nombrePaqueteCompleto} ${dirDatos}
+
+	copia del paquete en la cloud en una estructura de directoris similar ----> rclone copy ${nombrePaqueteCompleto} ${remoto}${dirPaquete}
+
+
+	

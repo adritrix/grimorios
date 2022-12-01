@@ -1,0 +1,56 @@
+empaquetr ficheros en locacl
+rclone opara sincronizacion en one drive 
+estudios.informatica.uned.es   62.204.199.24
+
+
+http://portal.uned.es/portal/page?_pageid=93,1055143&_dad=portal&_schema=PORTAL
+contra ---> Uned2020 ----->parkour200
+inf00047
+estudiante.practicas@informatica.uned.es 
+
+correo del primer server---> info-estudios@informatica.uned.es------>Uned2020
+
+ssh inf00047@estudios.informatica.uned.es
+######################################################################################################################
+tar -c -v -f salvarBK.tar salvar --_ me hace un paquete llamado salvarBK con vervalizacion de del directorio salvar
+
+tar -f salvarK.tar -r t4.txt -----> me añade al la raiz del archivo salvarBK.tar el archivo t4.txt
+
+tar -xf salvarbk.tar.gz -c ttt me descomprime el archivo en la carpeta previamente creada ttt
+
+tar -czv -f /backups/salvarbk.tar.gz /home/odin me empaqueta el archivo, me lo comprime el home/odin en la carpeta /bachups
+
+tar tvf /home/inf00047/copiasPeriodicas/bk_2020_05_20_11_12.tar.gz -----> me muestra el contenido del archivo 
+
+tar -vxf tmp.tar.gz -C ./test -------> me descomprime el arcvhivo en el lugar indicado 
+
+rclone config ----> me inicia la configuracion del disco remoto 
+
+rclone sync gate tetmk1:puert me vuelca todos los archivos del directorio local gate en el directorio remoto puert 
+
+rclone check /gate testmk1:puert me comprueva las diferencias entre los dos directprios 
+
+rclone compy --max-age 24h /gate testmk1:   me copia los archivos que se hayan modificado en las ultimas 24 horas el directoprio remoto 
+
+mysql -uroot -pEspan@241280 acceso a la base de datos del server 
+
+mysql -umimir -ppkr200 < helicoptero.sql -----> me crea la base de datos con la sentencia 
+
+mysqldump -umimir -ppkr200 Chinook > predator.sql -----> me vuelca las sentencias de la base de datos que le indico 
+
+rm "$(ls -t | tail -2)" -------> me borra los dos archivos mas antiguos de un directorio 
+
+ls | wc -l -----> me cuanta los items en un directorio
+ 
+
+
+------------------------------------------------------------------------------------------------------------------------
+Comida --> siguiente paso es provar los comandos del tar con compresion y ver si tambien se añaden los archivos o o se crean nuvaos archivs
+mysql backup
+
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+tamaño del tar 
+
+

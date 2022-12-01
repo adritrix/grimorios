@@ -1,0 +1,18 @@
+
+
+1 Terminar de arreglar lo de los logs xxxxx
+
+2 tener la dos partes del script listas, es decir las diarias y las semanales xxxxxxxx
+-------------------------------------------------------------------------------------------------+
+
+5 mirar que se copia en las bases de datos
+
+3 hacer documentacion de como funciona el rclone y lo de la clave
+
+4 documentar todo 
+
+
+
+
+
+ 

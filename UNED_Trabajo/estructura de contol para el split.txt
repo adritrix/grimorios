@@ -1,0 +1,16 @@
+tamanoTar=`ls -l --block-size=G ${nombrePaqueteCompleto}  | cut -d " " -f 5 | sed s/.$//`
+echo $tamanoTar
+
+if [ $tamanoTar -ge 10 ]
+then
+        echo "el archivo ${nombrePaquete}${fecha}${extension}  es igual a 10GB o mayor de 10GB por lo que sera dividido"
+        carpetaSplit=${nombrePaqueteCompleto}_split/
+        mkdir -p $carpetaSplit
+        split -b 9G ${nombrePaqueteCompleto} ${carpetaSplit}"parte_"
+        rclone copy ${dirPaquete} ${remoto}${dirPaquete} &>> $archivoLog
+        rm -rf ${nombrePaqueteCompleto}
+else
+
+        echo "el archivo ${nombrePaquete}  es menor de 10GB por lo que no sera dividido  "
+        rclone copy ${nombrePaqueteCompleto} ${remoto}${dirPaquete} &>> $archivoLog
+fi
